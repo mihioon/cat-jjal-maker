@@ -22,3 +22,7 @@ const fetchCat = async (text) => {
   const responseJson = await response.json();
   return `${OPEN_API_DOMAIN}/${responseJson.url}`;
 };
+
+fetch('https://cataas.com/cat?json=true')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
